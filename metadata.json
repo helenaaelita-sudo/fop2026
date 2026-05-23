@@ -1,0 +1,6 @@
+{
+  "name": "Курс ФОП в Украине",
+  "description": "Интерактивный план курса по оформлению и ведению ФОП в Украине.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
