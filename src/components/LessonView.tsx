@@ -90,8 +90,15 @@ export default function LessonView({ lesson, onBack, onGoToTest }: Props) {
                     <button onClick={() => setIsFormVisible(false)}><X/></button>
                 </div>
                 <form onSubmit={submitHomework} className="space-y-4">
-                    <input type="email" placeholder="Ваш Email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full p-3 bg-slate-800 rounded-lg" />
-                    <textarea placeholder="Ваше задание" value={homework} onChange={e => setHomework(e.target.value)} required className="w-full p-3 bg-slate-800 rounded-lg" rows={5} />
+                    <p className="text-slate-400 text-sm">
+                        Задание: Опишите подробно выполненную работу, прикрепите файлы если необходимо.
+                    </p>
+                    <input type="email" placeholder="Ваш Email" value={email} onChange={e => setEmail(e.target.value)} required className="w-full p-3 bg-slate-800 rounded-lg text-white" />
+                    <textarea placeholder="Ваше задание" value={homework} onChange={e => setHomework(e.target.value)} required className="w-full p-3 bg-slate-800 rounded-lg text-white" rows={5} />
+                    <div className="flex flex-col gap-2">
+                        <label className="text-sm text-slate-400">Прикрепить файлы:</label>
+                        <input type="file" multiple className="text-sm text-slate-300" />
+                    </div>
                     <button type="submit" className="w-full bg-amber-600 text-white font-bold py-3 rounded-lg">Отправить</button>
                 </form>
             </div>
